@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 
 
 
-$sql = "SELECT * FROM branch";
+$sql = "SELECT s.*,b.city FROM staff s join branch b on b.bno=s.bno"; //салбарт харъяалагдах ажилчидийн бүх мэдээлэл ,салбар аль хотод байрлах
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
